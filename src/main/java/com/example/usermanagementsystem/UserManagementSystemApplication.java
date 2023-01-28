@@ -1,5 +1,6 @@
 package com.example.usermanagementsystem;
 
+import com.example.usermanagementsystem.entity.Teacher;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
