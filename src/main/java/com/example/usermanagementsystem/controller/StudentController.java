@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @RestController
 public class StudentController {
     @Autowired
@@ -20,13 +19,10 @@ public class StudentController {
     public List<Student> getAllStudents(){
         return studentService.getAllStudents();
     }
+
     @PostMapping("/student")
-    public void saveStudent(Student tmpStudent){
-        System.out.println(tmpStudent.getStudentName());
-        System.out.println(tmpStudent.getStudentAddress());
-        System.out.println(tmpStudent.getStudentBranch());
-        System.out.println(tmpStudent.getStudentId());
-        System.out.println(tmpStudent.getStudentPassword());
+    public void saveStudent(@RequestBody Student tmpStudent){
         studentService.saveStudent(tmpStudent);
     }
+
 }
